@@ -10,10 +10,10 @@
 //% weight=100 color=#FF4B33 icon=""
 //%block="Screen Brightness"
 namespace custom {
-    let fadeSteps = 100
+    let fadeSteps = 0
     let palette = Buffer.create(48);
     image.setPalette(palette);
-
+setDefaultPalette()
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
