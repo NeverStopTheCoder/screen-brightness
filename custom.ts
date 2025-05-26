@@ -11,13 +11,6 @@
 //%block="Screen Brightness"
 namespace custom {
     let fadeSteps = 0
-    let pos = 0
-    let s = 0
-    let h = 0
-    let c = 0
-    let u = 0
-    let n = 0
-    let e = 0
     let palette = Buffer.create(48);
     image.setPalette(palette);
 
