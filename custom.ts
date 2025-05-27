@@ -13,7 +13,7 @@ namespace custom {
     let fadeSteps = 0
     let palette = Buffer.create(48);
     image.setPalette(palette);
-
+fadeScreenToWhite(20)
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
@@ -61,8 +61,7 @@ namespace custom {
         image.setPalette(palette);
     }
 
-    function fadeScreenToWhite(steps: number) {
-      
+    function fadeScreenToWhite(steps: number) {  
         for (let k = 0; k <= fadeSteps; k++) {
             // Controls fade speed
             pause(100)
