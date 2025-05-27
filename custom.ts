@@ -52,14 +52,15 @@ setDefaultPalette()
 
     //% block="set colors to $n"
     //%group="for Simulator"
-    export function foo4(n: number[]): void {
-        // Create a buffer from the array of numbers
+    export function foo4(n: string[]): void {
         let palette = Buffer.create(n.length)
         for (let i = 0; i < n.length; i++) {
-            palette.setUint8(i, n[i])
+            // Parse the string as a hexadecimal number
+            palette.setUint8(i, parseInt(n[i], 16))
         }
         image.setPalette(palette)
     }
+
 
 
     function setDefaultPalette() {
