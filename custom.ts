@@ -45,10 +45,22 @@ setDefaultPalette()
     //% block="set Simulator Screen Brightness to $n (Simulator)"
     //%group="for Simulator"
     export function foo3(n: number): void {
-        setDefaultPalette()
+        
         fadeScreenToWhite(n)
 
     }
+
+    //% block="set colors to $n"
+    //%group="for Simulator"
+    export function foo4(n: number[]): void {
+        // Create a buffer from the array of numbers
+        let palette = Buffer.create(n.length)
+        for (let i = 0; i < n.length; i++) {
+            palette.setUint8(i, n[i])
+        }
+        image.setPalette(palette)
+    }
+
 
     function setDefaultPalette() {
         let defaultColors = hex`
