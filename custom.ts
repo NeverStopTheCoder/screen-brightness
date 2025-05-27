@@ -12,7 +12,8 @@
 namespace custom {
     let fadeSteps = 0
     let palette = Buffer.create(48);
-  
+    image.setPalette(palette);
+
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
@@ -44,7 +45,7 @@ namespace custom {
     //% block="set Simulator Screen Brightness to $n (Simulator)"
     //%group="for Simulator"
     export function foo3(n: number): void {
-        
+  
         fadeScreenToWhite(n)
 
     }
