@@ -45,7 +45,7 @@ namespace custom {
     //% block="set Simulator Screen Brightness to $n (Simulator)"
     //%group="for Simulator"
     export function foo3(n: number): void {
-
+  
         fadeScreenToWhite(n)
 
     }
