@@ -51,16 +51,12 @@ setDefaultPalette()
     }
 
     function setDefaultPalette() {
-        let defaultColors = hex`
-        000000 FFFFFF FF2121 FF93C4 FF8135 FFF609 249CA3 78DC52
-        003FAD 87F2FF 8E2EC4 A4839F 5C406C E5CDC4 91463D 000000
-    `;
+        let defaultColors = hex`__palette`;
         for (let i = 0; i <= 47; i++) {
             palette.setUint8(i, defaultColors[i]);
         }
         image.setPalette(palette);
     }
-
     function fadeScreenToWhite(steps: number) {  
         for (let k = 0; k <= fadeSteps; k++) {
             // Controls fade speed
