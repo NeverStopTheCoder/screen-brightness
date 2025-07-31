@@ -45,9 +45,12 @@ setDefaultPalette()
     //% block="set Simulator Screen Brightness to $n (Simulator)"
     //%group="for Simulator"
     export function foo3(n: number): void {
-  setDefaultPalette()
         fadeScreenToWhite(n)
-
+    }
+    //% block="reset color pallete"
+    //%group="for Simulator"
+    export function foo4(): void {
+        setDefaultPalette()
     }
 
     function setDefaultPalette() {
@@ -67,9 +70,9 @@ setDefaultPalette()
                 let l = palette.getUint8(index * 3 + 1);
                 let d = palette.getUint8(index * 3 + 2);
                 // Move each color closer to white (255, 255, 255)
-                t = Math.floor(t + (5 - t) * k / steps)
-                l = Math.floor(l + (5 - l) * k / steps)
-                d = Math.floor(d + (5 - d) * k / steps)
+                t = Math.floor(t + (0 - t) * k / steps)
+                l = Math.floor(l + (0 - l) * k / steps)
+                d = Math.floor(d + (0 - d) * k / steps)
                 palette.setUint8(index * 3, t);
                 palette.setUint8(index * 3 + 1, l);
                 palette.setUint8(index * 3 + 2, d);
@@ -77,5 +80,6 @@ setDefaultPalette()
             image.setPalette(palette);
         }
     }
+    
     
 }
